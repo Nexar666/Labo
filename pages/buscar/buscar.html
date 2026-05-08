@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mi primera página web/Buscar</title>
+    </head>
+
+    <body style="background-color: rgb(255, 255, 255);">
+        <header>
+            <h1 style="text-align: center; color: red;">Ventana de Busqueda</h1>
+        </header>
+
+        <main>
+            <h2>Uso de formulario con metodo GET</h2>
+        </main>
+
+
+        <nav>
+            <a href="../../index.html">
+                <button>principal </button>
+            </a>
+            <a href="../horario/horario.html">
+               <button>horario</button>
+            </a>
+            <a href="../multimedia/multimedia.html">
+                <button>multimedia</button>
+            </a>
+            <a href="../contacto/contacto.html">
+                <button>contacto</button>
+            </a>
+        </nav>
+
+
+    <section class="Formulario tutoria" style="background-color: rgb(181, 181, 181);">
+        <h2>Formulario</h2>
+        <form method="GET" action="buscar.html">
+            <label for="materia">Materia</label>
+            <select id="materia", name="materia", required>
+                <option value="">-Seleccione asignatura   </option>
+                <option value="SistemaBD"> Sistema DB </option>
+                <option value="FundamentosWeb">Fundamentos Web</option>
+                <option value="Interfaces">Interfaces</option>
+                <option value="MantSistema">Mantenimiento de Sistema</option>
+            </select>     <br> <br>
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" name="fecha" required
+            min="2026-05-08"> <br><br>
+            <label for="hora">Hora</label>
+            <input type="time" id="hora" name="hora"
+            min="08:00" max="16:00" step="1800" required> </input> <br><br>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" maxlength="10" minlength="5" placeholder="Ingresa Un Nombre"><br><br>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingresa Un Apellido"><br><br>
+            <label for="Correo"> Correo</label>
+            <input type="email" id="Correo" name="Correo" placeholder="Usa el @"><br><br>
+             <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" maxlength="7" minlength="4" placeholder="Minimo 4 letras y maximo 7"><br><br>
+            <button ">Submit</button>
+        </form>
+    </section>
+
+
+
+    </body>
+
+    <footer>
+        <p>Para más informacion visita la pagina principal</p>
+        <button>
+            <a href="../../index.html">
+                pagina principal
+            </a>
+        </button>
+    </footer>
+</html>

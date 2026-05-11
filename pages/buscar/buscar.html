@@ -1,75 +1,159 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <title>Mi primera página web/Buscar</title>
-    </head>
 
-    <body style="background-color: rgb(255, 255, 255);">
-        <header>
-            <h1 style="text-align: center; color: red;">Ventana de Busqueda</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>Mi primera página web | Buscar</title>
+</head>
 
-        <main>
-            <h2>Uso de formulario con metodo GET</h2>
-        </main>
+<body style="background-color: rgb(255, 255, 255); font-family: sans-serif;">
+    <header>
+        <h1 style="text-align: center; color: red;">Ventana de Búsqueda</h1>
+    </header>
 
+    <main>
+        <h2 style="text-align: center;">Uso de formulario con método GET</h2>
+    </main>
 
-        <nav>
-            <a href="../../index.html">
-                <button>principal </button>
-            </a>
-            <a href="../horario/horario.html">
-               <button>horario</button>
-            </a>
-            <a href="../multimedia/multimedia.html">
-                <button>multimedia</button>
-            </a>
-            <a href="../contacto/contacto.html">
-                <button>contacto</button>
-            </a>
-        </nav>
+    <nav style="text-align: center; margin-bottom: 20px;">
+        <a href="../../index.html"><button>Principal</button></a>
+        <a href="../horario/horario.html"><button>Horario</button></a>
+        <a href="../multimedia/multimedia.html"><button>Multimedia</button></a>
+        <a href="../contacto/contacto.html"><button>Contacto</button></a>
+    </nav>
 
+    <section class="Formulario-tutoria"
+        style="background-color: rgb(181, 181, 181); padding: 20px; border-radius: 8px; width: 60%; margin: 0 auto;">
+        <h2 style="text-align: center;">Formulario de Registro</h2>
 
-    <section class="Formulario tutoria" style="background-color: rgb(181, 181, 181);">
-        <h2>Formulario</h2>
-        <form method="GET" action="buscar.html">
-            <label for="materia">Materia</label>
-            <select id="materia", name="materia", required>
-                <option value="">-Seleccione asignatura   </option>
-                <option value="SistemaBD"> Sistema DB </option>
-                <option value="FundamentosWeb">Fundamentos Web</option>
-                <option value="Interfaces">Interfaces</option>
-                <option value="MantSistema">Mantenimiento de Sistema</option>
-            </select>     <br> <br>
-            <label for="fecha">Fecha</label>
-            <input type="date" id="fecha" name="fecha" required
-            min="2026-05-08"> <br><br>
-            <label for="hora">Hora</label>
-            <input type="time" id="hora" name="hora"
-            min="08:00" max="16:00" step="1800" required> </input> <br><br>
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" maxlength="10" minlength="5" placeholder="Ingresa Un Nombre"><br><br>
-            <label for="apellido">Apellido</label>
-            <input type="text" id="apellido" name="apellido" placeholder="Ingresa Un Apellido"><br><br>
-            <label for="Correo"> Correo</label>
-            <input type="email" id="Correo" name="Correo" placeholder="Usa el @"><br><br>
-             <label for="contrasena">Contraseña</label>
-            <input type="password" id="contrasena" name="contrasena" maxlength="7" minlength="4" placeholder="Minimo 4 letras y maximo 7"><br><br>
-            <button ">Submit</button>
+        <form method="GET" action="../../index.html">
+
+            <fieldset style="border: 2px solid white; margin-bottom: 20px; padding: 15px;">
+                <legend style="background-color: white; padding: 5px 10px; font-weight: bold;">Detalles de la Materia
+                </legend>
+
+                <label for="materia">Materia:</label>
+                <select id="materia" name="materia" required>
+                    <option value="">- Seleccione asignatura -</option>
+                    <option value="SistemaBD">Sistema DB</option>
+                    <option value="FundamentosWeb">Fundamentos Web</option>
+                    <option value="Interfaces">Interfaces</option>
+                    <option value="MantSistema">Mantenimiento de Sistema</option>
+                </select>
+                <br><br>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required min="2026-05-08">
+                <br><br>
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" min="08:00" max="16:00" step="1800" required>
+            </fieldset>
+
+            <fieldset style="border: 2px solid white; padding: 15px;">
+                <legend style="background-color: white; padding: 5px 10px; font-weight: bold;">Información Personal
+                </legend>
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" maxlength="10" minlength="5"
+                    placeholder="Ingresa tu nombre">
+                <br><br>
+
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido">
+                <br><br>
+
+                <label for="Correo">Correo:</label>
+                <input type="email" id="Correo" name="Correo" placeholder="ejemplo@correo.com">
+                <br><br>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" maxlength="7" minlength="4"
+                    placeholder="4 a 7 caracteres">
+            </fieldset>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit" style="padding: 10px 20px; cursor: pointer;">Enviar Formulario</button>
+            </div>
         </form>
     </section>
 
+    <form method="GET" action="../../index.html">
+
+        <section class="fieldset2">
+            <fieldset style="border-radius: 12px; padding: 20px;
+    border: 2px solid #c7d8d5; margin-bottom: 25px;">
+
+                <legend style="font-weight: bold; color: #2c3e50;">
+                    Intereses
+                </legend>
+
+                <input type="checkbox" id="tecnologia" name="intereses" value="Tecnologia" >
+                <label for="tecnologia">Tecnología</label><br><br>
+
+                <input type="checkbox" id="juegos" name="intereses" value="Juegos">
+                <label for="juegos">Juegos</label><br><br>
+
+                <input type="checkbox" id="musica" name="intereses" value="Música">
+                <label for="musica">Música</label><br><br>
+
+                <input type="checkbox" id="cine" name="intereses" value="Cine  ">
+                <label for="cine">Cine</label><br><br>
+
+                <input type="checkbox" id="video" name="intereses" value="Video">
+                <label for="video">Video</label><br><br>
+
+                <input type="checkbox" id="ciencia" name="intereses" value="Ciencia ">
+                <label for="ciencia">Ciencia</label><br><br>
+
+                <input type="checkbox" id="programacion" name="intereses" value="Programación">
+                <label for="programacion">Programación</label><br><br>
+
+                <input type="checkbox" id="redes" name="intereses" value="Redes ">
+                <label for="redes">Redes</label><br><br>
+
+                <input type="checkbox" id="filosofia" name="intereses" value="Filosofia">
+                <label for="filosofia">Filosofia</label><br><br>
+
+                <input type="checkbox" id="noticias" name="intereses" value="Noticias">
+                <label for="noticias">Noticias</label>
+
+            </fieldset>
+            <div style="text-align: center; margin-top: 20px;">
+                <button type="submit" style="padding: 10px 20px; cursor: pointer;">Enviar Formulario</button>
+            </div>
+        </section>
 
 
-    </body>
+        <fieldset style="border-radius: 12px; padding: 20px;
+    border: 2px solid #c6d6d3;">
 
-    <footer>
-        <p>Para más informacion visita la pagina principal</p>
-        <button>
-            <a href="../../index.html">
-                pagina principal
-            </a>
-        </button>
+            <legend style="font-weight: bold; color: #2c3e50;">
+                Frecuencia
+            </legend>
+
+            <input type="radio" id="diario" name="frecuencia" value="Diariamente">
+            <label for="diario">Diariamente</label><br><br>
+
+            <input type="radio" id="semanal" name="frecuencia" value="Semanalmente">
+            <label for="semanal">Semanalmente</label><br><br>
+
+            <input type="radio" id="mensual" name="frecuencia" value="Mensualmente">
+            <label for="mensual">Mensualmente</label>
+
+        </fieldset>
+
+    </form>
+
+    <br><br>
+
+    <footer style="text-align: center; border-top: 1px solid #ccc; padding-top: 10px;">
+        <p>Para más información visita la página principal</p>
+        <a href="../../index.html">
+            <button>Página Principal</button>
+        </a>
     </footer>
+
+</body>
+
 </html>

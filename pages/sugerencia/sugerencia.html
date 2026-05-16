@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerencias</title>
+</head>
 <body style="background-color: beige;">
-    <h1 style="text-align: center;">Sugerencias</h1>
-    <p> si tienes una sugerencia agregala a este area</p>
-    <h2>Datos para llenar la sugerencia</h2>
-    <form method="get" action="../../index.html">
-        <textarea id="sug" name="sug" placeholder="Escribe tu sugerencia aquí..."
-            style="width: 100%; height: 150px; padding: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-        <button
-            style="padding: 10px 20px; background-color: #5bc0de; color: white; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
-    </form>
-</body>
+    <nav>
+        <a href="../../index.html">Inicio</a> |
+        <a href="../horario/horario.html">Horario</a> |
+        <a href="../multimedia/multimedia.html">Multimedia</a> |
+        <a href="../contacto/contacto.html">Contacto</a> |
+        <a href="../buscar/buscar.html">Buscar</a> |
+        <a href="sugerencia.html">Sugerencias</a>
+    </nav>
 
+    <header>
+        <h1 style="text-align: center;">Sugerencias</h1>
+        <p style="text-align: center;">Si tienes una sugerencia, agrégala a esta área</p>
+    </header>
+
+    <main>
+        <h2>Datos para llenar la sugerencia</h2>
+        <form method="get" action="../../index.html">
+            <textarea name="sug" placeholder="Escribe tu sugerencia aquí..." rows="8" cols="60"></textarea>
+            <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Creado por Nexar Riofrio Medranda</p>
+        <p>Clase de Fundamentos Web - HTML semántico</p>
+    </footer>
+</body>
 </html>

@@ -3,273 +3,138 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mi primera página web | Buscar</title>
+    <title>Formularios | Laboratorio HTML5</title>
 </head>
 
-<body style="background-color: beige; font-family: Arial, sans-serif; margin: 0;">
+<body bgcolor="beige" style="font-family: Arial, sans-serif; margin: 0;">
 
     <header style="background-color: #d9534f; padding: 15px;">
-        <h1 style="text-align: center; color: white; margin: 0;">
-            Ventana de Búsqueda
-        </h1>
+        <h1 align="center" style="color: white; margin: 0;">Laboratorio de Formularios HTML5</h1>
     </header>
 
-    <main>
-        <h2 style="text-align: center; color: #333;">
-            Uso de formularios con método GET
-        </h2>
+    <nav align="center" style="margin: 20px;">
+        <a href="../../index.html">Inicio</a> |
+        <a href="../horario/horario.html">Horario</a> |
+        <a href="../multimedia/multimedia.html">Multimedia</a> |
+        <a href="../contacto/contacto.html">Contacto</a> |
+        <a href="buscar.html">Formularios</a> |
+        <a href="../sugerencia/sugerencia.html">Sugerencias</a>
+    </nav>
 
-        <nav style="text-align: center; margin: 20px;">
-            <a href="../../index.html">
-                <button>Principal</button>
-            </a>
+    <main align="center">
+        <h2 style="color: #333;">Seis formularios diferentes</h2>
+        <p style="font-size: 14px; color: #666;">Cada uno prueba un tipo de entrada distinto</p>
 
-            <a href="../horario/horario.html">
-                <button>Horario</button>
-            </a>
+        <div style="display: inline-block; width: 90%;">
 
-            <a href="../multimedia/multimedia.html">
-                <button>Multimedia</button>
-            </a>
-
-            <a href="../contacto/contacto.html">
-                <button>Contacto</button>
-            </a>
-            <a href="../sugerencia/sugerencia.html">
-                <button>Sugerencias</button>
-            </a>
-        </nav>
-
-        <!-- CONTENEDOR GENERAL -->
-        <div style="text-align: center;">
-
-            <section style="
-                background-color: #d9d9d9;
-                padding: 25px;
-                border-radius: 12px;
-                width: 350px;
-                display: inline-block;
-                vertical-align: top;
-                margin: 10px;
-                box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-            ">
-
-                <h2 style="margin-top: 0; color: #333;">
-                    Formulario de Registro
-                </h2>
-
-                <form method="GET" action="../../index.html">
-
-                    <fieldset style="
-                        border: 2px solid white;
-                        border-radius: 10px;
-                        margin-bottom: 20px;
-                        padding: 15px;
-                        text-align: left;
-                    ">
-
-                        <legend style="
-                            background-color: white;
-                            padding: 5px 10px;
-                            font-weight: bold;
-                            border-radius: 5px;
-                        ">
-                            Detalles de la Materia
-                        </legend>
-
-                        <label for="materia">Materia:</label><br>
-                        <select id="materia" name="materia" required style="width: 100%; padding: 5px;">
-                            <option value="">- Seleccione asignatura -</option>
-                            <option value="SistemaBD">Sistema DB</option>
-                            <option value="FundamentosWeb">Fundamentos Web</option>
-                            <option value="Interfaces">Interfaces</option>
-                            <option value="MantSistema">Mantenimiento de Sistema</option>
-                        </select>
-
-                        <br><br>
-
-                        <label for="fecha">Fecha:</label><br>
-                        <input type="date" id="fecha" name="fecha" required min="2026-05-08"
-                            style="width: 100%; padding: 5px;">
-
-                        <br><br>
-
-                        <label for="hora">Hora:</label><br>
-                        <input type="time" id="hora" name="hora" min="08:00" max="16:00" step="1800" required
-                            style="width: 100%; padding: 5px;">
-
-                    </fieldset>
-
-                    <fieldset style="
-                        border: 2px solid white;
-                        border-radius: 10px;
-                        padding: 15px;
-                        text-align: left;
-                    ">
-
-                        <legend style="
-                            background-color: white;
-                            padding: 5px 10px;
-                            font-weight: bold;
-                            border-radius: 5px;
-                        ">
-                            Información Personal
-                        </legend>
-
-                        <label for="nombre">Nombre:</label><br>
-                        <input type="text" id="nombre" name="nombre" maxlength="10" minlength="5"
-                            placeholder="Ingresa tu nombre" style="width: 100%; padding: 5px;">
-
-                        <br><br>
-
-                        <label for="apellido">Apellido:</label><br>
-                        <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido"
-                            style="width: 100%; padding: 5px;">
-
-                        <br><br>
-
-                        <label for="correo">Correo:</label><br>
-                        <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com"
-                            style="width: 100%; padding: 5px;">
-
-                        <br><br>
-
-                        <label for="contrasena">Contraseña:</label><br>
-                        <input type="password" id="contrasena" name="contrasena" maxlength="7" minlength="4"
-                            placeholder="4 a 7 caracteres" style="width: 100%; padding: 5px;">
-
-                    </fieldset>
-
-                    <div style="text-align: center; margin-top: 20px;">
-                        <button type="submit" style="
-                            padding: 10px 20px;
-                            background-color: #d9534f;
-                            color: white;
-                            border: none;
-                            border-radius: 5px;
-                            cursor: pointer;
-                        ">
-                            Enviar Formulario
-                        </button>
-                    </div>
-
+            <!-- Formulario 1: Búsqueda con input text -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">1. Búsqueda (input text)</h3>
+                <form method="GET" action="resultado_text.html">
+                    <input type="text" name="palabra_clave" placeholder="Ingrese palabra a buscar" required
+                        minlength="3" style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <button type="submit"
+                        style="padding: 8px 16px; background-color: #d9534f; color: white;">Buscar</button>
                 </form>
             </section>
 
-            <!-- FORMULARIO SECUNDARIO -->
-            <section style="
-                display: inline-block;
-                vertical-align: top;
-                margin: 10px;
-            ">
+            <!-- Formulario 2: Select desplegable -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">2. Lista desplegable (select)</h3>
+                <form method="GET" action="resultado_select.html">
+                    <select name="materia" required style="width: 90%; padding: 8px;">
+                        <option value="">- Seleccione materia -</option>
+                        <option value="Sistemas de Bases de Datos">Sistemas de Bases de Datos</option>
+                        <option value="Fundamentos de Sistemas Web">Fundamentos de Sistemas Web</option>
+                        <option value="Interfaces y Multimedia">Interfaces y Multimedia</option>
+                        <option value="Redes de Comunicación">Redes de Comunicación</option>
+                    </select>
+                    <br><br>
+                    <button type="submit"
+                        style="padding: 8px 16px; background-color: #d9534f; color: white;">Enviar</button>
+                </form>
+            </section>
 
-                <form method="GET" action="../../index.html">
+            <!-- Formulario 3: Checkbox múltiples -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">3. Intereses (checkbox)</h3>
+                <form method="GET" action="resultado_checkbox.html">
+                    <input type="checkbox" name="intereses" value="Tecnología"> Tecnología<br>
+                    <input type="checkbox" name="intereses" value="Juegos"> Juegos<br>
+                    <input type="checkbox" name="intereses" value="Música"> Música<br>
+                    <input type="checkbox" name="intereses" value="Cine"> Cine<br>
+                    <input type="checkbox" name="intereses" value="Programación"> Programación<br>
+                    <br>
+                    <button type="submit"
+                        style="padding: 8px 16px; background-color: #d9534f; color: white;">Enviar</button>
+                </form>
+            </section>
 
-                    <!-- INTERESES -->
-                    <fieldset style="
-                        border-radius: 12px;
-                        padding: 20px;
-                        border: 2px solid #c7d8d5;
-                        background-color: white;
-                        margin-bottom: 20px;
-                        text-align: left;
-                        width: 250px;
-                    ">
+            <!-- Formulario 4: Fecha (calendario) -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">4. Calendario (date)</h3>
+                <form method="GET" action="resultado_fecha.html">
+                    <label>Seleccione una fecha:</label><br>
+                    <input type="date" name="fecha_evento" required min="2025-01-01" style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <button type="submit"
+                        style="padding: 8px 16px; background-color: #d9534f; color: white;">Enviar</button>
+                </form>
+            </section>
 
-                        <legend style="font-weight: bold; color: #2c3e50;">
-                            Intereses
-                        </legend>
+            <!-- Formulario 5: Contacto/registro con nombre, email, asunto -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">5. Registro / Contacto</h3>
+                <form method="GET" action="resultado_registro.html">
+                    <label>Nombre:</label><br>
+                    <input type="text" name="nombre" required minlength="3" maxlength="30"
+                        placeholder="Nombres completos" style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <label>Correo electrónico:</label><br>
+                    <input type="email" name="correo" required placeholder="ejemplo@correo.com"
+                        style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <label>Asunto:</label><br>
+                    <input type="text" name="asunto" required minlength="5" maxlength="50"
+                        placeholder="Motivo de contacto" style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <button type="submit"
+                        style="padding: 8px 16px; background-color: #d9534f; color: white;">Enviar</button>
+                </form>
+            </section>
 
-                        <input type="checkbox" id="tecnologia" name="intereses" value="Tecnologia">
-                        <label for="tecnologia">Tecnología</label><br><br>
-
-                        <input type="checkbox" id="juegos" name="intereses" value="Juegos">
-                        <label for="juegos">Juegos</label><br><br>
-
-                        <input type="checkbox" id="musica" name="intereses" value="Musica">
-                        <label for="musica">Música</label><br><br>
-
-                        <input type="checkbox" id="cine" name="intereses" value="Cine">
-                        <label for="cine">Cine</label><br><br>
-
-                        <input type="checkbox" id="programacion" name="intereses" value="Programacion">
-                        <label for="programacion">Programación</label><br><br>
-
-                        <input type="checkbox" id="redes" name="intereses" value="Redes">
-                        <label for="redes">Redes</label>
-
-                    </fieldset>
-                    <fieldset style="
-                        border-radius: 12px;
-                        padding: 20px;
-                        border: 2px solid #c7d8d5;
-                        background-color: white;
-                        text-align: left;
-                        width: 250px;
-                    ">
-
-                        <legend style="font-weight: bold; color: #2c3e50;">
-                            Frecuencia
-                        </legend>
-
-                        <input type="radio" id="diario" name="frecuencia" value="Diariamente">
-                        <label for="diario">Diariamente</label><br><br>
-
-                        <input type="radio" id="semanal" name="frecuencia" value="Semanalmente">
-                        <label for="semanal">Semanalmente</label><br><br>
-
-                        <input type="radio" id="mensual" name="frecuencia" value="Mensualmente">
-                        <label for="mensual">Mensualmente</label>
-
-                    </fieldset>
-
-                    <div style="text-align: center; margin-top: 20px;">
-                        <button type="submit" style="
-                            padding: 10px 20px;
-                            background-color: #5bc0de;
-                            color: rgb(0, 0, 0);
-                            border-radius: 5px;
-                            cursor: pointer;
-                        ">
-                            Guardar Preferencias
-                        </button>
-                    </div>
-
+            <!-- Formulario 6: Login simulado con validación de contraseña -->
+            <section
+                style="background-color: #d9d9d9; padding: 20px; margin: 15px; border-radius: 12px; display: inline-block; width: 300px; vertical-align: top;">
+                <h3 style="color: #333;">6. Login simulado</h3>
+                <form method="GET" action="resultado_login.html">
+                    <label>Correo:</label><br>
+                    <input type="email" name="email_login" required placeholder="usuario@ejemplo.com"
+                        style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <label>Contraseña:</label><br>
+                    <input type="password" name="password_login" required minlength="8" maxlength="16"
+                        placeholder="8-16 caracteres" pattern="(?=.*[A-Za-z])(?=.*\d)(?=.*[\$!%*?&.#_-]).{8,16}"
+                        title="Debe incluir letras, números y al menos un carácter especial ($!%*?&.#_-)"
+                        style="width: 90%; padding: 8px;">
+                    <br><br>
+                    <button type="submit" style="padding: 8px 16px; background-color: #d9534f; color: white;">Iniciar
+                        sesión</button>
                 </form>
             </section>
 
         </div>
-        <div>
-            <br><br>
-            <h3 style="text-align: center;">Area de sugerencias</h3>
-            <input type="text" id="sug" name="sug" placeholder="Escribe tu sugerencia aquí"
-                style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
-            <div style="text-align: center; margin-top: 20px;">
-                <button type="submit" style="
-                        padding: 10px 20px;
-                        background-color: #5cb85c;
-                        color: white;
-                        border-radius: 5px;
-                        cursor: pointer;
-                    ">
-                    Enviar Sugerencia
-                </button>
-
-
-            </div>
     </main>
 
-    <footer style="
-        text-align: center; 
-        padding: 20px;
-        margin-top: 30px;
-        background-color: #f5f5f5;
-    ">
-        <p>Para más información visita la página principal</p>
-
-        <a href="../../index.html">
-            <button>Página Principal</button>
-        </a>
+    <footer align="center" style="padding: 20px; background-color: #f5f5f5; margin-top: 30px;">
+        <p>Laboratorio de Formularios HTML5 - Fundamentos de Sistemas Web</p>
+        <a href="../../index.html">Página Principal</a>
     </footer>
 
 </body>
